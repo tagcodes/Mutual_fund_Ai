@@ -1,0 +1,17 @@
+requests
+beautifulsoup4
+lxml
+python-dotenv
+markdownify
+langchain
+langchain-google-genai
+langchain-groq
+groq
+chromadb
+langchain-community
+sentence-transformers
+streamlit
+fastapi
+uvicorn
+pydantic
+python-multipart
