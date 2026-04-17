@@ -12,10 +12,14 @@ from src.phase_3_retrieval.engine import FactualFAQAssistant
 
 app = FastAPI(title="Mutual Fund FAQ API")
 
-# Configure CORS for Vercel Frontend
+# Configure CORS for Frontend
+# Read allowed origins from environment variable, default to "*" for convenience but recommend specific URL for production
+frontend_url = os.getenv("FRONTEND_URL", "*")
+origins = [frontend_url] if frontend_url != "*" else ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with your Vercel URL
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
