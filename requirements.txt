@@ -4,10 +4,8 @@ lxml
 python-dotenv
 markdownify
 langchain
-langchain-google-genai
-langchain-groq
-groq
-chromadb
+langchain-core
+langchain-text-splitters
 langchain-community
 sentence-transformers
 streamlit
